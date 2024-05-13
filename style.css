@@ -175,7 +175,7 @@ header {
   align-items: center;
 }
 
- .call-btn {
+.call-btn {
   display: flex;
   padding: 12px 32px;
   justify-content: center;
@@ -190,7 +190,7 @@ header {
   /* 4 */
   box-shadow: -1px 9px 10px 0px rgba(241, 89, 34, 0.2);
 }
- .call-btn button {
+.call-btn button {
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -202,7 +202,7 @@ header {
 }
 #hero-section {
   padding-top: 40px;
-  background-image: url('https://easyhrm.vn/wp-content/uploads/2024/05/background.png');
+  background-image: url("https://easyhrm.vn/wp-content/uploads/2024/05/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -240,12 +240,12 @@ header {
   display: flex;
   gap: 16px;
   align-items: center;
-  color: var(--Basic-1, #151F2F);
-font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: var(--Basic-1, #151f2f);
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .form-box {
   flex-shrink: 0;
@@ -290,4 +290,83 @@ line-height: normal;
   font-style: normal;
   font-weight: 600;
   line-height: 211%; /* 33.76px */
+}
+
+.lp-title {
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 54px */
+  color: #f6921e;
+  margin-bottom: 40px;
+}
+.lp-title span {
+  color: var(--Secondary-Xanh, #2951a0) !important;
+  font-family: "Nunito Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+#solution_vid {
+  padding: 80px 0;
+}
+
+/* Video */
+#light-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#VisaChipCardVideo {
+  max-width: 80%;
+}
+
+#light-box video {
+  border-radius: 8px;
+}
+
+/* end vid */
+#featured {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.featured-explain {
+  display: flex;
+  gap: 16px;
+  border-radius: 20px;
+  background: #fff9f3;
+  padding: 32px;
+}
+.featured-explain .number {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: var(--Cam-3, #f5844e);
+  color: var(--Secondary-Trng, #fff);
+
+  /* Heading 1/Bold */
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.featured-explain .explain-text {
+  color: var(--Basic-1, #151f2f);
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
