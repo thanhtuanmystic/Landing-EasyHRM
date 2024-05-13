@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+                <div class="header-top">
+                    <div class="container">
+                        <div class="header-top-content">
+                            <div class="left-content">
+                                <img style="max-width: 100%;" src="https://easyhrm.vn/wp-content/uploads/2024/05/logo_hrm-1.png" alt="">
+                                <ul>
+                                    <li><a href="#">Giải pháp</a></li>
+                                    <li><a href="#">Báo giá</a></li>
+                                    <li><a href="#">Khách hàng</a></li>
+                                </ul>
+                            </div>
+                            <div class="right-content">
+                               <div class="call-btn">
+                                <button>0916 825 201</button>
+                               </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+    </header>
+    <section id="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="title">
+                        Phần mềm chấm công thông minh <span>EasyHRM</span>
+                    </div>
+                    <ul>
+                        <li><img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png">Không cần máy chấm công, chỉ cần chấm công trên app điện thoại</li>
+                        <li><img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png">Loại bỏ gian lận công, xác thực khuôn mặt eKYC kết hợp Wifi, GPS</li>
+                        <li><img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png">Tự động ghi nhận dữ liệu công realtime (giờ vào/ra, đi sớm về muộn)</li>
+                        <li><img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png">Sắp xếp ca kíp, đăng ký nghỉ phép, giải trình linh hoạt ngay trên app</li>
+                        <li><img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png">Tích hợp trên camera, quản lý chấm công mọi lúc, mọi nơi</li>
+                        
+                    </ul>
+                    <img style="max-width: 100%;" src="https://easyhrm.vn/wp-content/uploads/2024/05/Group-427320913.png" alt="">
+                </div>
+                <div class="col-lg-5 form-box">
+                    <div class="form-title text-center">
+                         Ưu đãi sử dụng 1 năm miễn phí
+                    </div>
+                    <div class="form-register">
+                        <form method="POST" id="receive_document_form" action="../xu-ly-dang-ky-cham-cong-hrm">
+                            <div class="form-row">
+                                <div class="form-label">Họ và tên: <span style="color: red">*</span></div>
+                                <input type="text" name="fullname" data-msg="Hãy nhập họ tên đầy đủ" id="fullname"
+                                    placeholder="Nhập họ và tên" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">Số điện thoại: <span style="color: red">*</span></div>
+                                <input type="text" data-msg="Hãy nhập đúng số điện thoại" name="phoneNumber"
+                                    id="phoneNumber" placeholder="Nhập số điện thoại" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">Email: <span style="color: red">*</span></div>
+                                <input type="email" data-msg="Email sai định định dạng" name="email" id="email"
+                                    placeholder="Nhập email" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">Mã số thuế công ty: <span style="color: red">*</span></div>
+                                <input data-msg="Hãy nhập đúng mã số thuế" type="text" name="taxNumber" id="taxNumber"
+                                    placeholder="Nhập mã số thuế" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">Chức vụ: <span style="color: red">*</span></div>
+                                <select class="form-control" required name="position" id="position">
+                                    <option hidden value="">Chọn chức vụ</option>
+                                    <option value="hr">HR</option>
+                                    <option value="hrm">HRM</option>
+                                    <option value="ceo">CEO</option>
+                                    <option value="ke_toan">Kế toán</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                            </div>
+                            <!-- <div class="form-row">
+                                <div class="form-label">Quy mô công ty: <span style="color: red">*</span></div>
+                                <select class="form-control" required name="workscale" id="workscale">
+                                    <option hidden value="">Quy mô công ty</option>
+                                    <option value="duoi_10">Dưới 10 nhân sự</option>
+                                    <option value="10den50">10 - 50 nhân sự</option>
+                                    <option value="50den100">50 - 100 nhân sự</option>
+                                    <option value="100den250">100 - 250 nhân sự</option>
+                                    <option value="250den500">250 - 500 nhân sự</option>
+                                    <option value="500den1000">500 - 1000 nhân sự</option>
+                                    <option value="tren1000">Trên 1000 nhân sự</option>
+                                </select>
+                            </div> -->
+
+                            <div class="form-row">
+                                <div class="call-btn">
+                                    <button>Đăng ký</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

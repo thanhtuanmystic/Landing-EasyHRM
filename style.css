@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End Reset CSS */
+body {
+  padding-top: 90px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+.header-top {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.header-top-content {
+  display: flex;
+  justify-content: space-between;
+}
+.header-top-content .left-content {
+  display: flex;
+  gap: 56px;
+}
+.header-top-content .left-content ul {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+.header-top-content .left-content ul li {
+  color: var(--Gray-2, #263856);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.header-top-content .right-content {
+  display: flex;
+  align-items: center;
+}
+
+ .call-btn {
+  display: flex;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(
+    --gradient,
+    linear-gradient(287deg, #f15922 12.78%, #f6921e 95.8%)
+  );
+
+  /* 4 */
+  box-shadow: -1px 9px 10px 0px rgba(241, 89, 34, 0.2);
+}
+ .call-btn button {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  background-color: transparent;
+}
+#hero-section {
+  padding-top: 40px;
+  background-image: url('https://easyhrm.vn/wp-content/uploads/2024/05/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero-section .title {
+  color: var(--Blue1, #172d58);
+  font-family: "Nunito Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#hero-section .title span {
+  background: var(
+    --Secondary-Cam-Gardient,
+    linear-gradient(270deg, #f15922 11.93%, #f6921e 122.06%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Nunito Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#hero-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+#hero-section ul li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.form-box {
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--Blue2, #2951a0);
+  padding: 24px 48px;
+}
+.form-title {
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 150%; /* 42px */
+  margin-bottom: 20px;
+}
+.form-register form {
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #fff;
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-label {
+  color: var(--Gray-2, #263856);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form-control {
+  display: inline-flex;
+  padding: 8px 0px 8px 16px;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray-4, #9ba3b1);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 211%; /* 33.76px */
+}
