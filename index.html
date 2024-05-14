@@ -26,7 +26,7 @@
                                 </ul>
                             </div>
                             <div class="right-content">
-                               <div class="call-btn">
+                               <div class="call-btn btn">
                                 <button>0916 825 201</button>
                                </div>
                             </div>  
@@ -34,6 +34,78 @@
                     </div>
                 </div>
     </header>
+
+    <!-- popup -->
+    <div id="overlay"></div>
+    <div id="modal">
+        <div id="modalContent">
+            <div class="popup-title">
+                Ưu đãi sử dụng 1 năm miễn phí
+            </div>
+            <form id="infoForm" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="infoForm-form-row">
+                            <label class="infoForm-label" for="fullName">Họ tên:</label>
+                            <input class="form-control" type="text" id="fullName" name="tenungvien" placeholder="Nhập họ tên:" required />
+                            <span class="error-message" id="error-fullName"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="infoForm-form-row">
+                            <label class="infoForm-label" for="phoneNumber">Số điện thoại:</label>
+                            <input class="form-control" type="tel" id="phoneNumber" name="sdtungvien" placeholder="Nhập số điện thoại:" required />
+                            <span class="error-message" id="error-phoneNumber"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="infoForm-form-row">
+                            <label class="infoForm-label" for="email">Email:</label>
+                            <input class="form-control" type="email" id="email" name="emailungvien" placeholder="Nhập Email:" required />
+                            <span class="error-message" id="error-email"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="infoForm-form-row">
+                            <label class="infoForm-label" for="source">Chức vụ</label>
+                            <select class="form-control" name="sourceungvien" id="sourceungvien">
+                                <option hidden>Chọn chức vụ</option>
+                                <option value="web">Website Softdreams</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="linkedin">Linkedin</option>
+                                <option value="topcv">TopCV</option>
+                            </select>
+                            <span class="error-message" id="error-sourceungvien"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="infoForm-form-row">
+                            <label class="infoForm-label" for="description">Tên doanh nghiệp/ mã số thuế:</label>
+                            <input type="text" class="form-control" placeholder="Nhập tên doanh nghiệp/ mã số thuế:">
+                            </div>
+                    </div>
+                </div>
+                <style>
+                    #openModalBtn:hover,
+                    #openModalBtn2:hover {
+                        cursor: pointer;
+                        opacity: 0.8;
+                    }
+                </style>
+                <div class="call-btn btn">
+                    <button>Đăng ký</button>
+                </div>
+                <button type="button" id="closeModalBtn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="41"
+                        viewBox="0 0 40 41" fill="none">
+                        <path
+                            d="M20 4.25C16.7861 4.25 13.6443 5.20305 10.972 6.98862C8.29969 8.77419 6.21689 11.3121 4.98696 14.2814C3.75704 17.2507 3.43524 20.518 4.06225 23.6702C4.68926 26.8224 6.23692 29.7179 8.50952 31.9905C10.7821 34.2631 13.6776 35.8107 16.8298 36.4378C19.982 37.0648 23.2493 36.743 26.2186 35.513C29.1879 34.2831 31.7258 32.2003 33.5114 29.528C35.297 26.8557 36.25 23.7139 36.25 20.5C36.2455 16.1916 34.5319 12.061 31.4855 9.01454C28.439 5.96806 24.3084 4.25455 20 4.25ZM25.8844 24.6156C26.0005 24.7318 26.0926 24.8696 26.1555 25.0214C26.2184 25.1731 26.2507 25.3358 26.2507 25.5C26.2507 25.6642 26.2184 25.8269 26.1555 25.9786C26.0926 26.1304 26.0005 26.2682 25.8844 26.3844C25.7682 26.5005 25.6304 26.5926 25.4786 26.6555C25.3269 26.7183 25.1643 26.7507 25 26.7507C24.8358 26.7507 24.6731 26.7183 24.5214 26.6555C24.3696 26.5926 24.2318 26.5005 24.1156 26.3844L20 22.2672L15.8844 26.3844C15.7682 26.5005 15.6304 26.5926 15.4786 26.6555C15.3269 26.7183 15.1643 26.7507 15 26.7507C14.8358 26.7507 14.6731 26.7183 14.5214 26.6555C14.3696 26.5926 14.2318 26.5005 14.1156 26.3844C13.9995 26.2682 13.9074 26.1304 13.8445 25.9786C13.7817 25.8269 13.7493 25.6642 13.7493 25.5C13.7493 25.3358 13.7817 25.1731 13.8445 25.0214C13.9074 24.8696 13.9995 24.7318 14.1156 24.6156L18.2328 20.5L14.1156 16.3844C13.8811 16.1498 13.7493 15.8317 13.7493 15.5C13.7493 15.1683 13.8811 14.8502 14.1156 14.6156C14.3502 14.3811 14.6683 14.2493 15 14.2493C15.3317 14.2493 15.6498 14.3811 15.8844 14.6156L20 18.7328L24.1156 14.6156C24.2318 14.4995 24.3696 14.4074 24.5214 14.3445C24.6731 14.2817 24.8358 14.2493 25 14.2493C25.1643 14.2493 25.3269 14.2817 25.4786 14.3445C25.6304 14.4074 25.7682 14.4995 25.8844 14.6156C26.0005 14.7318 26.0926 14.8696 26.1555 15.0214C26.2184 15.1731 26.2507 15.3358 26.2507 15.5C26.2507 15.6642 26.2184 15.8269 26.1555 15.9786C26.0926 16.1304 26.0005 16.2682 25.8844 16.3844L21.7672 20.5L25.8844 24.6156Z"
+                            fill="#9BA3B1" />
+                    </svg></button>
+            </form>
+    
+        </div>
+    </div>
+
     <section id="hero-section">
         <div class="container">
             <div class="row">
@@ -103,8 +175,8 @@
                             </div> -->
 
                             <div class="form-row">
-                                <div class="call-btn">
-                                    <button>Đăng ký</button>
+                                <div class="call-btn btn">
+                                    <button class="">Đăng ký</button>
                                 </div>
                             </div>
                         </form>
@@ -123,7 +195,7 @@
         <div class="container">
             <div id="light-box">
                 <video id="VisaChipCardVideo" controls autoplay>
-                    <source src="https://easyhrm.vn/wp-content/uploads/2024/05/0507.mov" type="video/mp4">
+                    <!-- <source src="https://easyhrm.vn/wp-content/uploads/2024/05/0507.mov" type="video/mp4"> -->
                 </video>
             </div>
         </div>
@@ -160,7 +232,7 @@
                             Định vị chính xác vị trí chấm công dù ở bất cứ đâu (đi thị trường, công tác, dự án,..)
                         </div>
                     </div>
-                    <div style="width: 40%" class="call-btn">
+                    <div id="openModalBtn" style="width: 40%" class="call-btn btn">
                         <button>Dùng thử miễn phí</button>
                     </div>
                     
@@ -205,7 +277,7 @@
                             Dữ liệu công hiển thị chính xác giờ ra vào, định vị GPS và Wifi máy chủ
                          </div>
                      </div>
-                     <div style="width: 40%" class="call-btn">
+                     <div style="width: 40%" class="call-btn btn">
                          <button>Dùng thử miễn phí</button>
                      </div>
                      
@@ -245,7 +317,7 @@
                             Bảng công ghi nhận dữ liệu ca kíp, giờ vào ra chính xác, quản lý dễ dàng
                          </div>
                      </div>
-                     <div style="width: 40%" class="call-btn">
+                     <div style="width: 40%" class="call-btn btn">
                          <button>Dùng thử miễn phí</button>
                      </div>
                      
@@ -290,7 +362,7 @@
                             Theo dõi bảng công mỗi ngày chi tiết (số phút đi mượn, đi sớm,...)
                          </div>
                      </div>
-                     <div style="width: 40%" class="call-btn">
+                     <div style="width: 40%" class="call-btn btn">
                          <button>Dùng thử miễn phí</button>
                      </div>
                      
@@ -330,7 +402,7 @@
                             Quản lý phép thông minh, số lượng phép tồn, phép đã sử dụng chi tiết
                          </div>
                      </div>
-                     <div style="width: 40%" class="call-btn">
+                     <div style="width: 40%" class="call-btn btn">
                          <button>Dùng thử miễn phí</button>
                      </div>
                      
@@ -342,10 +414,197 @@
             </div>
          </div>
     </section>
+    <section id="partner">
+        <div class="container">
+            <div class="lp-title">2000+ Doanh nghiệp <span> đã sử dụng phần mềm chấm công </span>EasyHRM</div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- slide -->
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 24px;" class="col-lg-6">
+                    <div class="partner-explain">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png" alt="">
+                        <div class="explain-text">
+                            Loại bỏ tuyệt đối gian lận công
+                        </div>
+                    </div>
+                    <div class="partner-explain">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png" alt="">
+                        <div class="explain-text">
+                            Giảm thiểu tối đa sai sót công lương
+                        </div>
+                    </div>
+                    <div class="partner-explain">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png" alt="">
+                        <div class="explain-text">
+                            Tiết kiệm 80% đối soát dữ liệu công
+                        </div>
+                    </div>
+                    <div class="partner-explain">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/tabler_check.png" alt="">
+                        <div class="explain-text">
+                            Không tốn chi phí mua máy chấm công
+                        </div>
+                    </div>
+                    <div style="width: 40%" class="call-btn btn">
+                        <button>Dùng thử miễn phí</button>
+                    </div>
+                </div>
+               
+            </div>
+    </div>        
+    </section>
+    <section id="why_easyhrm">
+        <div class="container">
+        <div class="lp-title">Tại sao nên sử dụng <span>phần mềm chấm công EasyHRM? </span> </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="why-box">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/Frame-427320868.png" alt="">
+                        <div class="why-explain">
+                            Ứng dụng công nghệ eKYC tiên tiến nhất hiện nay
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="why-box">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/Frame-427320868-1.png" alt="">
+                        <div class="why-explain">
+                            Bảo mật đạt tiêu chuẩn quốc tế ISO/IEC 27001:2013
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="why-box">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/Frame-427320868-2.png" alt="">
+                        <div class="why-explain">
+                            Sở hữu hệ sinh thái mở, dễ dàng kết nối nhiều nền tảng
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="why-box">
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/Frame-427320868-3.png" alt="">
+                        <div class="why-explain">
+                            Đội ngũ hỗ trợ tận tâm, sẵn sàng phục vụ 24/7
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="price">
+        <div class="container">
+            <div class="lp-title">
+                Trải nghiệm gói dùng thử <span> phần mềm chấm công và 
+                phần mềm kê khai BHXH điện tử </span> chỉ tử 589k/năm
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img style="max-width: 100%" src="https://easyhrm.vn/wp-content/uploads/2024/05/Group-427320871.png" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <img style="max-width: 100%" src="https://easyhrm.vn/wp-content/uploads/2024/05/Group-427320872.png" alt="">
+                </div>
+               
+                <div class="col-lg-4">
+                    <img style="max-width: 100%" src="https://easyhrm.vn/wp-content/uploads/2024/05/Group-2609513.png" alt="">
+                </div>
+            </div>
+            <div class="price-btn">
+                <div class="call-btn btn">
+                    <button>Dùng thử miễn phí</button>
+                </div>
+                <div class="call-btn btn call-btn btn-nobackground">
+                    <button>Tư vấn ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="register_trial">
+        <div class="container">
+            <div class="lp-title">Nhận tư vấn 1:1 <span>từ chuyên viên của chúng tôi</span></div>
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6">
+                    <img style="max-width: 100%" src="https://easyhrm.vn/wp-content/uploads/2024/05/Group-427320895.png" alt="">
+                </div>
+                <div class="col-lg-6 form-box" style="background: linear-gradient(180deg, #A7C4FF 0.02%, #FFF 124.8%); height: 100%;">
+                    <div class="form-register">
+                        <form method="POST" id="receive_document_form" action="">
+                            <div class="form-row">
+                                <div class="form-label">Họ và tên: <span style="color: red">*</span></div>
+                                <input type="text" name="fullname" data-msg="Hãy nhập họ tên đầy đủ" id="fullname"
+                                    placeholder="Nhập họ và tên" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label">Số điện thoại: <span style="color: red">*</span></div>
+                                <input type="text" data-msg="Hãy nhập đúng số điện thoại" name="phoneNumber"
+                                    id="phoneNumber" placeholder="Nhập số điện thoại" class="form-control">
+                            </div>  
+                            <div class="form-row">
+                                <div class="form-label">Mã số thuế công ty: <span style="color: red">*</span></div>
+                                <input data-msg="Hãy nhập đúng mã số thuế" type="text" name="taxNumber" id="taxNumber"
+                                    placeholder="Nhập mã số thuế" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="call-btn btn">
+                                    <button>Đăng ký</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openModalBtn = document.getElementById("openModalBtn");
+            const openModalBtn2 = document.getElementById("openModalBtn2");
+            const closeModalBtn = document.getElementById("closeModalBtn");
+            const overlay = document.getElementById("overlay");
+            const modal = document.getElementById("modal");
+            const infoForm = document.getElementById("infoForm");
+    
+            openModalBtn.addEventListener("click", function () {
+                overlay.style.display = "block";
+                modal.style.display = "block";
+            });
+            openModalBtn2.addEventListener("click", function () {
+                overlay.style.display = "block";
+                modal.style.display = "block";
+            });
+    
+            closeModalBtn.addEventListener("click", function () {
+                closeOverlayAndModal();
+            });
+    
+            overlay.addEventListener("click", function (event) {
+                if (event.target === overlay) {
+                    closeOverlayAndModal();
+                }
+            });
+    
+            infoForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                closeOverlayAndModal();
+            });
+    
+            function closeOverlayAndModal() {
+                overlay.style.display = "none";
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
 </body>
 </html>
