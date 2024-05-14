@@ -105,7 +105,6 @@
     
         </div>
     </div>
-
     <section id="hero-section">
         <div class="container">
             <div class="row">
@@ -195,7 +194,7 @@
         <div class="container">
             <div id="light-box">
                 <video id="VisaChipCardVideo" controls autoplay>
-                    <!-- <source src="https://easyhrm.vn/wp-content/uploads/2024/05/0507.mov" type="video/mp4"> -->
+                    <source src="https://easyhrm.vn/wp-content/uploads/2024/05/0507.mov" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -235,7 +234,6 @@
                     <div id="openModalBtn" style="width: 40%" class="call-btn btn">
                         <button>Dùng thử miễn phí</button>
                     </div>
-                    
                 </div>
                 <div class="col-lg-6">
                     <img style="width: 100%" src="https://easyhrm.vn/wp-content/uploads/2024/05/featured1.png" alt="">
@@ -419,7 +417,35 @@
             <div class="lp-title">2000+ Doanh nghiệp <span> đã sử dụng phần mềm chấm công </span>EasyHRM</div>
             <div class="row">
                 <div class="col-lg-6">
-                    <!-- slide -->
+                  <!-- <img style="max-width: 100%;" src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback1.png" alt=""> -->
+                  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+                    loop="true">
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback1.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback2.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback3.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback4.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback5.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback6.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback7.png" alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="https://easyhrm.vn/wp-content/uploads/2024/05/feedback8.png" alt="">
+                    </swiper-slide>
+                   
+                </swiper-container>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 24px;" class="col-lg-6">
                     <div class="partner-explain">
@@ -558,18 +584,16 @@
         </div>
     </section>
     <footer>
-
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const openModalBtn = document.getElementById("openModalBtn");
-            const openModalBtn2 = document.getElementById("openModalBtn2");
             const closeModalBtn = document.getElementById("closeModalBtn");
             const overlay = document.getElementById("overlay");
             const modal = document.getElementById("modal");
@@ -579,11 +603,7 @@
                 overlay.style.display = "block";
                 modal.style.display = "block";
             });
-            openModalBtn2.addEventListener("click", function () {
-                overlay.style.display = "block";
-                modal.style.display = "block";
-            });
-    
+           
             closeModalBtn.addEventListener("click", function () {
                 closeOverlayAndModal();
             });

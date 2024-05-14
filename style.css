@@ -443,7 +443,47 @@ footer {
   padding: 80px 0;
   background: #f6f6f6;
 }
+.footer-left .slogan {
+  color: var(--Cam-2, #F26522);
+  font-family: Nunito Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 
+.footer-left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-left ul li {
+  display: flex;
+  gap: 16px;
+  color: var(--Basic-en, #000);
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 211%;
+  /* 29.54px */
+}
+
+.another-product {
+  color: #000;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 211%;
+  /* 29.54px */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 /* Modal Popup */
 #overlay {
   display: none;
@@ -467,7 +507,7 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
-  width: 70%;
+  width: 50%;
   margin-top: 3%;
 }
 
@@ -488,10 +528,11 @@ footer {
 #modalContent .popup-title {
   color: var(--Secondary-Xanh, #2951a0);
   font-family: "Nunito Sans";
-  font-size: 32px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 900;
   line-height: 150%; /* 48px */
+  margin-bottom: 32px;
 }
 
 .infoForm-form-row {
@@ -519,4 +560,27 @@ footer {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 10px;
+}
+
+
+/* Swiper */
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
